@@ -177,8 +177,8 @@
 
   <p class="about">
     junior studying computer science at west high.
-    i like to make stuff that people look at.
-    here are some of the things people looked at :
+    im not good at anything but i like to think i make an honest effort
+    anyway here are some things that i do:
   </p>
 
   <p class="section-title">— projects</p>
@@ -191,7 +191,7 @@
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://github.com/yourusername/project-one" target="_blank">bongomatic</a>
-        <p>a youtube channel formed out of sheer spite and hatred, 1.5k subscribers and counting, 140,000 total views across 7 videos</p>
+        <p>a youtube channel formed out of sheer boredom 1.5k subscribers and counting, 140,000 total views across 7 videos, taught me how to handle video editing, audio engineering, image editing, voice acting, and commenters telling me to kill myself</p>
         <div class="project-meta">youtube · 2025</div>
       </div>
     </div>
@@ -200,8 +200,8 @@
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://github.com/yourusername/project-two" target="_blank">Jakfruit Jonez</a>
-        <p>following the mediocre lucrative success of bongomatic, i used the money to kickstart jakfruit jonez; a music coalition consisting of me and my friends. is the music good? no. </p>
-        <div class="project-meta">JavaScript · React · 2024</div>
+        <p>following the mediocre lucrative success of bongomatic, i used the money to kickstart jakfruit jonez; a music coalition consisting of me and my friends. is the music good? no. but ive learned a lot about art, animation, music production, vocals, and more commenters telling me to kill myself. </p>
+        <div class="project-meta">youtube · 2026</div>
       </div>
     </div>
 
@@ -210,7 +210,7 @@
       <div class="project-body">
         <a href="https://github.com/yourusername/project-three" target="_blank">Project Three</a>
         <p>Maybe a hackathon project or something you built at 2am. That's the most honest kind of project description.</p>
-        <div class="project-meta">C++ · 2023</div>
+        <div class="project-meta">C++ · 2027</div>
       </div>
     </div>
 
