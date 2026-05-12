@@ -210,7 +210,7 @@
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://github.com/yourusername/project-three" target="_blank">Double Entendre</a>
-        <p>python based visual novel currently in early development. im working on it!! teaching me a lot about art, writing, python, 3D modeling, music, sound design, more python,  </p>
+        <p>python based visual novel currently in early development. im working on it!! teaching me a lot about art, writing, python, 3D modeling, music, sound design, more python, UI, gme design, and python again. did i mention python?  </p>
         <div class="project-meta">Python · 2027</div>
       </div>
     </div>
