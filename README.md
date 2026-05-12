@@ -192,7 +192,7 @@
       <div class="project-body">
         <a href="https://github.com/yourusername/project-one" target="_blank">bongomatic</a>
         <p>a youtube channel formed out of sheer spite and hatred, 1.5k subscribers and counting, 140,000 total views across 7 videos</p>
-        <div class="project-meta">Python · 2024</div>
+        <div class="project-meta">youtube · 2025</div>
       </div>
     </div>
 
