@@ -176,9 +176,9 @@
   <hr>
 
   <p class="about">
-    junior studying computer science at west high
-    i like to make stuff that people look at
-    here are some of the things people looked at
+    junior studying computer science at west high.
+    i like to make stuff that people look at.
+    here are some of the things people looked at :
   </p>
 
   <p class="section-title">— projects</p>
@@ -190,8 +190,8 @@
            <img class="project-img" src="images/project1.png" alt="Project One screenshot" />  -->
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
-        <a href="https://github.com/yourusername/project-one" target="_blank">Project One</a>
-        <p>A short description of what this project does and why you made it. Was it for a class? Just for fun? Mention that.</p>
+        <a href="https://github.com/yourusername/project-one" target="_blank">bongomatic</a>
+        <p>a youtube channel formed out of sheer spite and hatred, 1.5k subscribers and counting, 140,000 total views across 7 videos</p>
         <div class="project-meta">Python · 2024</div>
       </div>
     </div>
@@ -199,8 +199,8 @@
     <div class="project">
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
-        <a href="https://github.com/yourusername/project-two" target="_blank">Project Two</a>
-        <p>Another project. What problem does it solve? What did you learn? Keep it casual.</p>
+        <a href="https://github.com/yourusername/project-two" target="_blank">Jakfruit Jonez</a>
+        <p>following the mediocre lucrative success of bongomatic, i used the money to kickstart jakfruit jonez; a music coalition consisting of me and my friends. is the music good? no. </p>
         <div class="project-meta">JavaScript · React · 2024</div>
       </div>
     </div>
