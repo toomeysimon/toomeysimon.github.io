@@ -173,15 +173,15 @@
 <body>
 <div class="container">
 
-  <h1>Your Name</h1>
-  <p class="subtitle">cs student / hobbyist programmer / making stuff for fun</p>
+  <h1>Simon Toomey</h1>
+  <p class="subtitle">cs student / content creator / making stuff for fun</p>
 
   <hr>
 
   <p class="about">
-    hey! i'm currently studying [your major] at [your school].
-    i like building things and figuring out how stuff works.
-    this is just a little page to keep track of my projects :)
+    junior studying computer science at west high
+    i like to make stuff that people look at
+    here are some of the things people looked at
   </p>
 
   <p class="section-title">— projects</p>
@@ -220,7 +220,7 @@
   </div>
 
   <footer>
-    <p>find me on <a href="https://github.com/yourusername" target="_blank">github</a> · <a href="mailto:you@email.com">email me</a></p>
+    <p>find me on <a href="https://github.com/toomeysimon" target="_blank">github</a> · <a href="mailto:toomeysimon09@gmail.com">email me</a></p>
   </footer>
 
 </div>
