@@ -199,7 +199,7 @@
     <div class="project">
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
-        <a href="https://github.com/yourusername/project-two" target="_blank">Jakfruit Jonez</a>
+        <a href="https://github.com/yourusername/project-two" target="_blank">jakfruit jonez</a>
         <p>following the mediocre lucrative success of bongomatic, i used the money to kickstart jakfruit jonez; a music coalition consisting of me and my friends. is the music good? no. but ive learned a lot about art, animation, music production, vocals, and more commenters telling me to kill myself. </p>
         <div class="project-meta">youtube · 2026</div>
       </div>
@@ -208,9 +208,9 @@
     <div class="project">
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
-        <a href="https://github.com/yourusername/project-three" target="_blank">Project Three</a>
+        <a href="https://github.com/yourusername/project-three" target="_blank">Double Entendre</a>
         <p>Maybe a hackathon project or something you built at 2am. That's the most honest kind of project description.</p>
-        <div class="project-meta">C++ · 2027</div>
+        <div class="project-meta">Python · 2027</div>
       </div>
     </div>
 
