@@ -177,8 +177,8 @@
 
   <p class="about">
     junior studying computer science at west high.
-    i like making stuff and showing people stuff i made
-    i dont like python
+    here are some things i like: making things, drop shadows, portal 2, programming, purple
+    here are some things i dont like: talking and python, and talking about python
     anyway heres some things i made:
   </p>
 
