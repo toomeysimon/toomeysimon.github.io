@@ -13,6 +13,9 @@
 
     body {
       background-color: #293363;
+      background-image: url('images/p2bg.png');
+      background-repeat: repeat;
+      background-size: 500px 500px;
       color: #dde3f5;
       font-family: Verdana, Geneva, sans-serif;
       font-size: 15px;
@@ -22,10 +25,12 @@
     .container {
       max-width: 650px;
       margin: 0 auto;
+      background-color: #293363;
+      padding: 0 28px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: clamp(1.8rem, 8vw, 3rem);
       color: #c4b5fd;
       margin-bottom: 6px;
       animation: fadeIn 0.7s ease both;
@@ -37,6 +42,8 @@
       margin-bottom: 30px;
       animation: fadeIn 0.7s 0.15s ease both;
       opacity: 0;
+      transition: opacity 0.5s ease;
+      min-height: 1.4em;
     }
 
     hr {
@@ -92,8 +99,9 @@
 
     .project-img {
       width: 100%;
-      height: 180px;
-      object-fit: cover;
+      height: auto;
+      max-height: 280px;
+      object-fit: contain;
       display: block;
       background: #253058;
     }
@@ -113,10 +121,11 @@
 
     .project-body {
       padding: 16px 20px 18px;
+      background: #e8e4f5;
     }
 
     .project a {
-      color: #c4b5fd;
+      color: #141930;
       text-decoration: none;
       font-size: 1rem;
       font-weight: bold;
@@ -124,19 +133,20 @@
 
     .project a:hover {
       text-decoration: underline;
+      color: #141930;
     }
 
     .project p {
       margin-top: 8px;
       font-size: 0.82rem;
-      color: #8a9abf;
+      color: #3a3560;
       line-height: 1.7;
     }
 
     .project-meta {
       margin-top: 10px;
       font-size: 0.72rem;
-      color: #556088;
+      color: #6b6890;
     }
 
     /* ── FAQ ── */
@@ -229,7 +239,7 @@
 <div class="container">
 
   <img src="images/bname.gif" alt="Simon Toomey" style="height: 110px; margin-bottom: 6px;" />
-  <p class="subtitle">cs student / content creator / portal 2 enthusiast</p>
+  <p class="subtitle" id="subtitle">cs student / content creator / portal 2 enthusiast</p>
 
   <hr>
 
@@ -239,7 +249,7 @@
     here are some things im (kind of) proud to put my name on:
   </p>
 
-  <img src="images/bprojects.gif" alt="Simon Toomey" style="height: 60px; margin-bottom: 6px;" />
+  <img src="images/bprojects.gif" alt="— projects" style="height: 60px; margin-bottom: 6px;" />
 
   <div class="projects">
 
@@ -276,7 +286,7 @@
       </div>
     </div>
 
-    <!-- PROJECT 4 — new slot -->
+    <!-- PROJECT 4 -->
     <div class="project">
       <img class="project-img" src="images/bname.gif" style="height: 60px; margin-bottom: 6px;" alt="this website" />
       <div class="project-body">
@@ -290,7 +300,7 @@
 
   <!-- ── FAQ ── -->
   <div class="faq-section">
-    <img src="images/bfaq.gif" alt="-faq" style="height: 60px; margin-bottom: 6px;" />
+    <img src="images/bfaq.gif" alt="— faq" style="height: 60px; margin-bottom: 14px; display: block;" />
 
     <div class="faq-item">
       <button class="faq-question">
@@ -311,7 +321,7 @@
         i like to call it bongomatic blurpal (blue/purple). i orginally created it for bongomatic, im still waiting to hear back from the patent office regarding the name
       </div>
     </div>
-    
+
     <div class="faq-item">
       <button class="faq-question">
         where can i find you?
@@ -319,16 +329,6 @@
       </button>
       <div class="faq-answer">
         email, sometimes im roaming the streets.
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <button class="faq-question">
-        
-        <span class="faq-chevron">&#8964;</span>
-      </button>
-      <div class="faq-answer">
-        yes.
       </div>
     </div>
 
@@ -341,20 +341,50 @@
 </div>
 
 <script>
+  // faq dropdowns
   document.querySelectorAll('.faq-question').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = this.parentElement;
       var isOpen = item.classList.contains('open');
-      // close all
       document.querySelectorAll('.faq-item').forEach(function(i) {
         i.classList.remove('open');
       });
-      // toggle clicked one
       if (!isOpen) {
         item.classList.add('open');
       }
     });
   });
+
+  // rotating subtitle phrases
+  var phrases = [
+    "cs student / content creator / portal 2 enthusiast",
+    "made this site myself. mostly.",
+    "still waiting for portal 3",
+    "professional youtube comment survivor",
+    "python enjoyer / blender sufferer",
+    "junior dev. emphasis on junior.",
+    "i am not a robot. probably.",
+    "currently debugging something",
+    "west high cs / questionable musician",
+    "will work for steam games",
+    "yes i do think portal 2 is the best game ever",
+    "bongomatic blurpal patent pending",
+    "roaming the streets as we speak"
+  ];
+
+  var subtitle = document.getElementById('subtitle');
+
+  function rotatePhrases() {
+    subtitle.style.opacity = '0';
+    setTimeout(function() {
+      subtitle.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+      subtitle.style.opacity = '1';
+    }, 500);
+  }
+
+  setTimeout(function() {
+    setInterval(rotatePhrases, 4000);
+  }, 3000);
 </script>
 
 </body>
