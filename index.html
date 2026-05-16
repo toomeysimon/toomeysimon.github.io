@@ -16,6 +16,7 @@
       background-image: url('images/p2bg.png');
       background-repeat: repeat;
       background-size: 500px 500px;
+      background-attachment: fixed;
       color: #dde3f5;
       font-family: Verdana, Geneva, sans-serif;
       font-size: 15px;
@@ -38,14 +39,39 @@
       animation: fadeIn 0.7s ease both;
     }
 
-    .subtitle {
-      color: #8a9abf;
-      font-size: 0.88rem;
+    /* subtitle wrapper clips the slide animation */
+    .subtitle-wrap {
+      overflow: hidden;
+      height: 1.4em;
       margin-bottom: 30px;
       animation: fadeIn 0.7s 0.15s ease both;
       opacity: 0;
-      transition: opacity 0.5s ease;
-      min-height: 1.4em;
+    }
+
+    .subtitle {
+      color: #8a9abf;
+      font-size: 0.88rem;
+      line-height: 1.4em;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    /* sliding out upward */
+    .subtitle.slide-out {
+      transform: translateY(-110%);
+      opacity: 0;
+    }
+
+    /* ready to slide in from below */
+    .subtitle.slide-in-prep {
+      transform: translateY(110%);
+      opacity: 0;
+      transition: none;
+    }
+
+    /* sliding into place */
+    .subtitle.slide-in {
+      transform: translateY(0);
+      opacity: 1;
     }
 
     hr {
@@ -102,7 +128,7 @@
     .project-img {
       width: 100%;
       height: auto;
-      max-height: 280px;
+      max-height: 400px;
       object-fit: contain;
       display: block;
       background: #253058;
@@ -110,7 +136,7 @@
 
     .project-img-placeholder {
       width: 100%;
-      height: 180px;
+      height: 240px;
       background: #253058;
       display: flex;
       align-items: center;
@@ -135,7 +161,6 @@
 
     .project a:hover {
       text-decoration: underline;
-      color: #141930;
     }
 
     .project p {
@@ -241,7 +266,10 @@
 <div class="container">
 
   <img src="images/bname.gif" alt="Simon Toomey" style="height: 110px; margin-bottom: 6px;" />
-  <p class="subtitle" id="subtitle">cs student / content creator / portal 2 enthusiast</p>
+
+  <div class="subtitle-wrap">
+    <p class="subtitle" id="subtitle">cs student / content creator / portal 2 enthusiast</p>
+  </div>
 
   <hr>
 
@@ -290,7 +318,7 @@
 
     <!-- PROJECT 4 -->
     <div class="project">
-      <img class="project-img" src="images/bname.gif" style="height: 60px; margin-bottom: 6px;" alt="this website" />
+      <img class="project-img" src="images/bname.gif" alt="this website" />
       <div class="project-body">
         <a href="https://toomeysimon.github.io/" target="_blank">this website</a>
         <p>probaby not as technically impressive but i didnt know how to write in html before this, now i do. although youre the judge of how good i did</p>
@@ -343,7 +371,7 @@
 </div>
 
 <script>
-  // faq dropdowns
+  // ── FAQ dropdowns ──
   document.querySelectorAll('.faq-question').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = this.parentElement;
@@ -357,7 +385,7 @@
     });
   });
 
-  // rotating subtitle phrases
+  // ── Rotating subtitle with slide animation ──
   var phrases = [
     "cs student / content creator / portal 2 enthusiast",
     "no thats wrong!",
@@ -369,13 +397,13 @@
     "stong",
     "valve please hire me",
     "goldklumpen",
-    "my friend of josh"
+    "my friend of josh",
     "currently roaming the streets",
     "some might get it, some might dont",
     "i could get used to this!",
     "sometimes i dream of cheese",
     "hallo",
-    "theyre not drills theyre just my pigtails!"
+    "theyre not drills theyre just my pigtails!",
     "SPACE? WERE IN SPACE!",
     "i feel a good",
     "kafkaesque"
@@ -383,20 +411,36 @@
 
   var subtitle = document.getElementById('subtitle');
 
-  // pick a random phrase immediately on load
+  // pick a random phrase on load
   subtitle.textContent = phrases[Math.floor(Math.random() * phrases.length)];
 
   function rotatePhrases() {
-    subtitle.style.opacity = '0';
+    // slide out upward
+    subtitle.classList.add('slide-out');
+
     setTimeout(function() {
+      // snap to below without animation
+      subtitle.classList.remove('slide-out');
+      subtitle.classList.add('slide-in-prep');
       subtitle.textContent = phrases[Math.floor(Math.random() * phrases.length)];
-      subtitle.style.opacity = '1';
+
+      // force reflow so the transition fires
+      subtitle.getBoundingClientRect();
+
+      // slide in from below
+      subtitle.classList.remove('slide-in-prep');
+      subtitle.classList.add('slide-in');
+
+      setTimeout(function() {
+        subtitle.classList.remove('slide-in');
+      }, 500);
+
     }, 500);
   }
 
   setTimeout(function() {
-    setInterval(rotatePhrases, 4000);
-  }, 3000);
+    setInterval(rotatePhrases, 5000);
+  }, 5000);
 </script>
 
 </body>
