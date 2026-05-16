@@ -13,27 +13,33 @@
 
     body {
       background-color: #293363;
-      background-image: url('images/p2bg.png');
-      background-repeat: repeat;
-      background-size: 500px 500px;
-      background-attachment: fixed;
       color: #dde3f5;
       font-family: Verdana, Geneva, sans-serif;
       font-size: 15px;
       padding: 40px 20px;
     }
 
+    .bg-left, .bg-right {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: calc((100vw - 650px) / 2);
+      background-image: url('images/p2bg.png');
+      background-repeat: repeat;
+      background-size: 500px 500px;
+      z-index: -1;
+    }
+
+    .bg-left  { left: 0; }
+    .bg-right { right: 0; }
+
     .container {
       max-width: 650px;
       margin: 0 auto;
       background-color: #293363;
       padding: 0 28px 60px;
-      box-shadow: 0 0 0 100vmax #293363;
-      clip-path: inset(0 -100vmax -100vmax -100vmax);
-      margin-top: -40px;
       padding-top: 40px;
       position: relative;
-      z-index: 0;
     }
 
     h1 {
@@ -267,6 +273,8 @@
   </style>
 </head>
 <body>
+<div class="bg-left"></div>
+<div class="bg-right"></div>
 <div class="container">
 
   <img src="images/bname.gif" alt="Simon Toomey" style="height: 110px; margin-bottom: 6px;" />
