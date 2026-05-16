@@ -27,6 +27,8 @@
       margin: 0 auto;
       background-color: #293363;
       padding: 0 28px;
+      box-shadow: 0 0 0 100vmax #293363;
+      clip-path: inset(0 -100vmax);
     }
 
     h1 {
@@ -373,6 +375,9 @@
   ];
 
   var subtitle = document.getElementById('subtitle');
+
+  // pick a random phrase immediately on load
+  subtitle.textContent = phrases[Math.floor(Math.random() * phrases.length)];
 
   function rotatePhrases() {
     subtitle.style.opacity = '0';
