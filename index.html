@@ -14,7 +14,7 @@
     body {
       background-color: #293363;
       color: #dde3f5;
-      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Arial Rounded MT Bold", sans-serif;
       font-size: 15px;
       padding: 40px 20px;
     }
@@ -208,7 +208,7 @@
       background: none;
       border: none;
       color: #dde3f5;
-      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", "Arial Rounded MT Bold", sans-serif;
       font-size: 0.88rem;
       text-align: left;
       padding: 16px 4px;
@@ -277,7 +277,7 @@
 <div class="bg-right"></div>
 <div class="container">
 
-  <img src="images/bname.gif" alt="Simon Toomey" style="height: 110px; margin-bottom: 6px;" />
+  <img src="images/bname.gif" alt="Simon Toomey" style="height: 110px; max-width: 100%; object-fit: contain; margin-bottom: 6px;" />
 
   <div class="subtitle-wrap">
     <p class="subtitle" id="subtitle">cs student / content creator / portal 2 enthusiast</p>
@@ -300,20 +300,20 @@
          then replace the placeholder div with:
          <img class="project-img" src="images/bongomatic.png" alt="bongomatic screenshot" /> -->
     <div class="project">
-      <img class="project-img" src="images/bingor.jpg" alt="bongomatic inc" />
+      <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://www.youtube.com/@bongomatic_tv/videos" target="_blank">bongomatic</a>
-        <p>one day i woke up and i wanted to make videos; so i did. 1.5k subscribers and counting, 140,000 total views across 7 videos. taught me how to handle video editing, audio engineering, image editing, script writing, voice acting, and commenters telling me to kill myself.</p>
+        <p>a youtube channel formed out of sheer boredom. 1.5k subscribers and counting, 140,000 total views across 7 videos. taught me how to handle video editing, audio engineering, image editing, script writing, voice acting, and commenters telling me to kill myself.</p>
         <div class="project-meta">youtube · 2025</div>
       </div>
     </div>
 
     <!-- PROJECT 2 -->
     <div class="project">
-      <img class="project-img" src="images/banner2.jpg" alt="jakfruit jonez" />
+      <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://www.youtube.com/@JAKFRUITJONEZ" target="_blank">jakfruit jonez</a>
-        <p>similar story. one day i woke up and wanted to make music; i made music. is the music good? no. but ive learned a lot about art, animation, music production, sound design, and more commenters telling me to kill myself.</p>
+        <p>following the mediocre lucrative success of bongomatic, i used the money to kickstart jakfruit jonez; a music coalition consisting of me and my friends. is the music good? no. but ive learned a lot about art, animation, music production, sound design, and more commenters telling me to kill myself.</p>
         <div class="project-meta">youtube · 2026</div>
       </div>
     </div>
@@ -323,7 +323,7 @@
       <div class="project-img-placeholder">[ add a screenshot here ]</div>
       <div class="project-body">
         <a href="https://github.com/toomeysimon" target="_blank">double entendre</a>
-        <p>you get the idea. wake up, want to make game, working on it. python based visual novel currently in early development. teaching me a lot about art, writing, python, 3D modeling, music, sound design, more python, UI, game design, and python again. did i mention python?</p>
+        <p>python based visual novel currently in early development. im working on it!! teaching me a lot about art, writing, python, 3D modeling, music, sound design, more python, UI, game design, and python again. did i mention python?</p>
         <div class="project-meta">Python · 2027</div>
       </div>
     </div>
@@ -333,7 +333,7 @@
       <img class="project-img" src="images/bname.gif" alt="this website" />
       <div class="project-body">
         <a href="https://toomeysimon.github.io/" target="_blank">this website</a>
-        <p>probaby not as technically impressive but i didnt know how to write in html before this, now i do. did i do a good job? do i suck? youre the judge</p>
+        <p>probaby not as technically impressive but i didnt know how to write in html before this, now i do. although youre the judge of how good i did</p>
         <div class="project-meta">html · 2026</div>
       </div>
     </div>
@@ -356,11 +356,11 @@
 
     <div class="faq-item">
       <button class="faq-question">
-        whats with the comic sans?
+        whats with the blue?
         <span class="faq-chevron">&#8964;</span>
       </button>
       <div class="faq-answer">
-        comic sans gets a bad rap. everyone says its ugly and unprofessional, but im willing to give it a shot. its bold, its unique, its human, yooure probably not seeing it on anyone elses website. theyd avoid it for being risky. i embrace it.
+        i like to call it bongomatic blurpal (blue/purple). i orginally created it for bongomatic, im still waiting to hear back from the patent office regarding the name
       </div>
     </div>
 
@@ -402,17 +402,23 @@
     "cs student / content creator / portal 2 enthusiast",
     "no thats wrong!",
     "I LOVE PORTAL 2",
+    "professional youtube comment survivor",
     "if i dont know how to love you, ill leave you be",
     "science isnt about why! its about why not!",
     "we do what we must because we can.",
+    "stong",
     "valve please hire me",
+    "goldklumpen",
     "my friend of josh",
     "currently roaming the streets",
     "some might get it, some might dont",
     "i could get used to this!",
     "sometimes i dream of cheese",
+    "hallo",
+    "theyre not drills theyre just my pigtails!",
     "SPACE? WERE IN SPACE!",
-    "i feel a good"
+    "i feel a good",
+    "kafkaesque"
   ];
 
   var subtitle = document.getElementById('subtitle');
