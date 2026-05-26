@@ -295,10 +295,7 @@
 
   <div class="projects">
 
-    <!-- PROJECT 1 -->
-    <!-- To add an image: save it to the "images" folder next to index.html,
-         then replace the placeholder div with:
-         <img class="project-img" src="images/bongomatic.png" alt="bongomatic screenshot" /> -->
+ 
     <div class="project">
       <img class="project-img" src="images/bingor.jpg" alt="bongomatic" />
       <div class="project-body">
@@ -308,7 +305,7 @@
       </div>
     </div>
 
-    <!-- PROJECT 2 -->
+
     <div class="project">
       <img class="project-img" src="images/banner2.jpg" alt="jakfruit jonez" />
       <div class="project-body">
@@ -318,7 +315,7 @@
       </div>
     </div>
 
-    <!-- PROJECT 3 -->
+
     <div class="project">
       <img class="project-img" src="images/double etendre.001.jpeg" alt="double entendre" />
       <div class="project-body">
@@ -328,7 +325,7 @@
       </div>
     </div>
 
-    <!-- PROJECT 4 -->
+
     <div class="project">
       <img class="project-img" src="images/bname.gif" alt="this website" />
       <div class="project-body">
@@ -340,7 +337,7 @@
 
   </div>
 
-  <!-- ── FAQ ── -->
+
   <div class="faq-section">
     <img src="images/bfaq.gif" alt="— faq" style="height: 60px; margin-bottom: 14px; display: block;" />
 
@@ -383,7 +380,7 @@
 </div>
 
 <script>
-  // ── FAQ dropdowns ──
+
   document.querySelectorAll('.faq-question').forEach(function(btn) {
     btn.addEventListener('click', function() {
       var item = this.parentElement;
@@ -397,7 +394,6 @@
     });
   });
 
-  // ── Rotating subtitle with slide animation ──
   var phrases = [
     "cs student / content creator / portal 2 enthusiast",
     "no thats wrong!",
@@ -425,15 +421,13 @@
     subtitle.classList.add('slide-out');
 
     setTimeout(function() {
-      // snap to below without animation
+
       subtitle.classList.remove('slide-out');
       subtitle.classList.add('slide-in-prep');
       subtitle.textContent = phrases[Math.floor(Math.random() * phrases.length)];
 
-      // force reflow so the transition fires
       subtitle.getBoundingClientRect();
 
-      // slide in from below
       subtitle.classList.remove('slide-in-prep');
       subtitle.classList.add('slide-in');
 
